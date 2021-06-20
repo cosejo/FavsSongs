@@ -9,9 +9,9 @@ import com.example.favsongs.login.model.User
 @Entity(tableName = TABLE_NAME)
 data class UserEntity (
     @PrimaryKey (autoGenerate = true) private val id: Int,
-    @ColumnInfo(name = NAME) private val name: String,
+    @ColumnInfo(name = NAME) private var name: String,
     @ColumnInfo(name = PASSWORD) private val password: String,
-    @ColumnInfo(name = PICTURE) private val picture: String
+    @ColumnInfo(name = PICTURE) private var picture: String
 ) : User {
     
     companion object {
@@ -37,4 +37,11 @@ data class UserEntity (
         return password
     }
 
+    override fun setName(name: String) {
+        this.name = name;
+    }
+
+    override fun setPicture(picture: String) {
+        this.picture = picture;
+    }
 }

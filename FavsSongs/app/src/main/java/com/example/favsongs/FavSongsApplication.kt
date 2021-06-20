@@ -7,5 +7,16 @@ import com.example.favsongs.login.model.User
 internal class FavSongsApplication : Application() {
     // Using by lazy so the database and the repository are only created when they're needed
     // rather than when the application starts
-    internal val database by lazy { FavSongsRoomDatabase.getDatabase(this) }
+    companion object {
+        lateinit var database: FavSongsRoomDatabase
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        database = FavSongsRoomDatabase.getDatabase(this)
+    }
+
+    fun database(): FavSongsRoomDatabase {
+        return database
+    }
 }

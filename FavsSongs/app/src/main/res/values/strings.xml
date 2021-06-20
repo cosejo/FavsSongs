@@ -12,5 +12,10 @@
 
     <!-- Profile Strings -->
     <string name="profile_menu">"Perfil"</string>
+    <string name="profile_add_users_menu">"Agregar Usuarios"</string>
+    <string name="action_logout">Cerrar sesión</string>
+    <string name="action_save">Guardar</string>
+    <string name="message_wrong_username">Nombre de usuario inválido</string>
+    <string name="message_wrong_image">Imagen inválida</string>
 
 </resources>

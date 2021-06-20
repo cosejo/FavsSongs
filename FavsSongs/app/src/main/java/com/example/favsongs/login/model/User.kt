@@ -5,4 +5,6 @@ interface User {
     fun getName(): String
     fun getPicture(): String
     fun getPassword(): String
+    fun setName(name: String)
+    fun setPicture(picture: String)
 }

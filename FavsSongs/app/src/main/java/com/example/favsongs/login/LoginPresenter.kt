@@ -9,6 +9,11 @@ class LoginPresenter(private val view: LoginContract.View, private val userDao: 
     private val scopeMainThread = CoroutineScope(job + Dispatchers.Main)
     private val scopeIO = CoroutineScope(job + Dispatchers.IO)
 
+    /**
+     * Performs user login
+     * @param username Username for login
+     * @param password User password for login
+     */
     override fun login(username: String, password: String) {
         view.showLoadingView()
         scopeIO.launch {
@@ -25,6 +30,12 @@ class LoginPresenter(private val view: LoginContract.View, private val userDao: 
         }
     }
 
+    /**
+     * Validate the input Password
+     * @param inputPassword Input password for login
+     * @param userPassword User stored password
+     * @param id User id
+     */
     private fun validateUserPassword(inputPassword: String, userPassword: String, id: Int) {
         val encryptedPassword = encryptionManager.encrypt(inputPassword)
         view.hideLoadingView()

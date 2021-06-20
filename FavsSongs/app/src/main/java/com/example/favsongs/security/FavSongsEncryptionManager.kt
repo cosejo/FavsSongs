@@ -9,7 +9,9 @@ class FavSongsEncryptionManager: EncryptionManager {
     private val DEFAULTKEY = "ASDFGHJKLASDFGHJ"
 
     /**
-     * aes encryption
+     * Encryption the input String with AES
+     * @param input String to be encrypted
+     * @return Encrypted String
      */
     override fun encrypt(input: String): String {
         val cipher = Cipher.getInstance("AES")
@@ -22,7 +24,9 @@ class FavSongsEncryptionManager: EncryptionManager {
     }
 
     /**
-     * aes decryption
+     * Decryption the input String with AES
+     * @param input String to be decrypted
+     * @return Decrypted String
      */
     override fun decrypt(input: String): String {
         val cipher = Cipher.getInstance("AES")

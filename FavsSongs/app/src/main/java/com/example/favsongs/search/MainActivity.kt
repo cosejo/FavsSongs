@@ -1,10 +1,11 @@
-package com.example.favsongs
+package com.example.favsongs.search
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.example.favsongs.R
 import com.example.favsongs.login.view.LoginActivity
 
 class MainActivity : AppCompatActivity() {

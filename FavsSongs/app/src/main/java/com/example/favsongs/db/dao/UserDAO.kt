@@ -3,6 +3,7 @@ package com.example.favsongs.db.dao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.example.favsongs.db.entity.UserEntity
 
 @Dao
@@ -15,4 +16,7 @@ interface UserDAO {
 
     @Insert
     fun insert(user: UserEntity)
+
+    @Update
+    fun update(user: UserEntity)
 }
