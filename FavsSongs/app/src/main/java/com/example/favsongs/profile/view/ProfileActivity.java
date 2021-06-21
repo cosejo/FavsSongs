@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.favsongs.FavSongsApplication;
-import com.example.favsongs.search.MainActivity;
 import com.example.favsongs.R;
 import com.example.favsongs.login.view.LoginActivity;
 import com.example.favsongs.profile.ImageProcessor;
@@ -96,9 +95,9 @@ public class ProfileActivity extends AppCompatActivity implements ProfileContrac
 
     @Override
     public void openLoginView() {
-        Intent mainIntent = new Intent(this, MainActivity.class);
-        mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(mainIntent);
+        Intent loginIntent = new Intent(this, LoginActivity.class);
+        loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(loginIntent);
     }
 
     private void openImageSelectorDialog() {
@@ -123,7 +122,7 @@ public class ProfileActivity extends AppCompatActivity implements ProfileContrac
 
     private boolean validateImageInput(){
         if (mImagePath == null) {
-            Toast.makeText(this, R.string.message_wrong_username, Toast.LENGTH_SHORT);
+            Toast.makeText(this, R.string.message_wrong_username, Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
@@ -131,7 +130,7 @@ public class ProfileActivity extends AppCompatActivity implements ProfileContrac
 
     private boolean validateUsernameInput(){
         if (mUserNameEditText.getText().toString().isEmpty()) {
-            Toast.makeText(this, R.string.message_wrong_username, Toast.LENGTH_SHORT);
+            Toast.makeText(this, R.string.message_wrong_username, Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

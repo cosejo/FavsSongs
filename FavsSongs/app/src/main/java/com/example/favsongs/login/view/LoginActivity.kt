@@ -46,7 +46,7 @@ class LoginActivity: AppCompatActivity(), LoginContract.View {
     }
 
     override fun errorLogin() {
-        Toast.makeText(this, "Login could not be performed", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, R.string.login_failed, Toast.LENGTH_SHORT).show()
     }
 
     override fun showLoadingView() {

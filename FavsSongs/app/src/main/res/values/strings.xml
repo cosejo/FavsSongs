@@ -18,4 +18,9 @@
     <string name="message_wrong_username">Nombre de usuario inválido</string>
     <string name="message_wrong_image">Imagen inválida</string>
 
+    <!-- Search Strings -->
+    <string name="action_search">Buscar</string>
+    <string name="prompt_search">Ingresa el nombre del artista</string>
+    <string name="search_invalid_input">Debes ingresar un nombre para buscar</string>
+
 </resources>
